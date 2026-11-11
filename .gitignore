@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.idea/
+.vscode/
+.cache/
+*.onnx
+*.log
+*.tmp
+tmp/
+.env
+smoke_test.py
+sample_resumes/*.pdf
+!sample_resumes/README.md

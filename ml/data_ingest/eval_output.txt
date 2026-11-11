@@ -1,0 +1,41 @@
+﻿==================================================================
+VeriHire evaluation on synthetic gold set (computed at run time)
+==================================================================
+Records: 30 loaded, 30 processed | pages: 32 | chunks: 123
+Chunks/record: min 1 mean 4.1 max 6 | chunk length: min 22 mean 74 max 263 (hard max 1500)
+
+Gold label coverage (records WITHOUT a label of this kind):
+  full_name: 0 | emails: 1 | phones: 2 | urls: 9 | sections: 2 | skills: 1 | years (null): 5
+
+PII detection
+  Email recall                 29/29       100.0%
+  Phone recall                 28/28       100.0%
+  Name recall                  30/30       100.0%
+  URL recall (info)            24/24       100.0%
+  Email precision (info)       29/29       100.0%
+  Phone precision (info)       28/28       100.0%
+  URL precision (info)         24/24       100.0%
+  names detected where gold has none: 0
+  gold values still present in scrubbed chunks (leakage): emails 0, phones 0, urls 0, names 0
+
+Skills (micro-averaged over all records)
+  TP 112  FP 0  FN 0
+  Precision 100.0% | Recall 100.0% | F1 100.0%
+  Exact-set records            30/30       100.0%
+
+Section detection (labelled sections only; header/other excluded)
+  TP 91  FP 0  FN 0
+  Precision 100.0% | Recall 100.0% | F1 100.0%
+
+Profile
+  Years-of-experience MAE   0.000 years  (n=25, predicted null where gold has a value: 0)
+  Null-years correct            5/5        100.0%
+  Education-level accuracy     30/30       100.0%
+  Sparse-flag accuracy         30/30       100.0%
+
+Planned targets vs measured (30 synthetic records; not a claim about real resumes)
+  Email recall               target >= 99%   measured 100.0%     -> met
+  Phone recall               target >= 99%   measured 100.0%     -> met
+  Name recall                target >= 90%   measured 100.0%     -> met
+  Years-of-experience MAE    target <= 1.0   measured 0.000      -> met
+  Education-level accuracy   target >= 90%   measured 100.0%     -> met

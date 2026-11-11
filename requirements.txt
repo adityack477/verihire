@@ -1,0 +1,4 @@
+﻿fastembed==0.9.1
+numpy==2.5.4
+pymupdf==2.1
+pytest==9.2.0
